@@ -6,6 +6,6 @@ def merged_mail(name,domain):
     return mail
 
 name=["samarth","triya"]
-domain=["edu.in","terrorist.org"]
+domain=["edu.in","example.org"]
 print(merged_mail(name,domain))
         

@@ -2,6 +2,7 @@ var i, j, k;
 var str;
 var out = "";
 function fun() {
+  out = "";
   var text = document.getElementById("input").value;
   for (i = 0; i < 3; i++) {
     str = text.charAt(i);

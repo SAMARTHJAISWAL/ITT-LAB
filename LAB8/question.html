@@ -72,10 +72,12 @@
         inventoryBody.innerHTML = "";
         inventory.forEach(function(item) {
             var row = document.createElement("tr");
-            row.innerHTML = `
-                <td>${item.name}</td>
-                <td>${item.quantity}</td>
-            `;
+            // textContent (not innerHTML) so user-typed names can't inject markup
+            [item.name, item.quantity].forEach(function(value) {
+                var cell = document.createElement("td");
+                cell.textContent = value;
+                row.appendChild(cell);
+            });
             inventoryBody.appendChild(row);
         });
     }

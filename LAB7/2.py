@@ -35,7 +35,9 @@ while a == 1:
 
 email = input("Enter email ")
 
-conn.execute("INSERT INTO STUDENT VALUES (" + s_id + " , " + reg + " , '" +branch+"' , "+sem+", '"+sec+"' , "+ str(cgpa)+", '"+email +"')");
+# Parameterised query: user input is never spliced into the SQL string
+conn.execute("INSERT INTO STUDENT VALUES (?, ?, ?, ?, ?, ?, ?)",
+             (int(s_id), int(reg), branch, int(sem), sec, cgpa, email))
 conn.commit()
 print ("Records created successfully")
 conn.close()

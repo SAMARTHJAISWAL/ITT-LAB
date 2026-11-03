@@ -1,10 +1,10 @@
 var num = "",
-  num1,
-  num2,
-  op;
-n1;
-n2;
-ans;
+  operand1,
+  operand2,
+  op,
+  n1,
+  n2,
+  ans;
 function num1() {
   num = num + "1";
   document.getElementById("output").textContent = num;
@@ -50,35 +50,35 @@ function dot() {
   document.getElementById("output").textContent = num;
 }
 function add() {
-  num1 = num;
+  operand1 = num;
   document.getElementById("output").textContent = "";
   num = "";
   op = "+";
 }
 function sub() {
-  num1 = num;
+  operand1 = num;
   document.getElementById("output").textContent = "";
   num = "";
   op = "-";
 }
 function mul() {
-  num1 = num;
+  operand1 = num;
   document.getElementById("output").textContent = "";
   num = "";
   op = "*";
 }
 function div() {
-  num1 = num;
+  operand1 = num;
   document.getElementById("output").textContent = "";
   num = "";
   op = "/";
 }
 function equal() {
-  num2 = num;
+  operand2 = num;
   document.getElementById("output").textContent = "";
   num = "";
-  n1 = parseFloat(num1);
-  n2 = parseFloat(num2);
+  n1 = parseFloat(operand1);
+  n2 = parseFloat(operand2);
   if (op == "+") {
     ans = n1 + n2;
   } else if (op == "-") {
