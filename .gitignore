@@ -1,0 +1,14 @@
+# SQLite databases created by the LAB6/LAB7 scripts at runtime
+*.db
+*.sqlite3
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
